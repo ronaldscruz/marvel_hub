@@ -1,9 +1,9 @@
 # react-native
 
 - [x] Componentes
-- [ ] Navegação
-- [ ] Estilizando Header e StatusBar
-- [ ] Buscando produtos da API
+- [x] Navegação
+- [x] Estilizando Header e StatusBar
+- [x] Buscando produtos da API
 - [ ] Estado
 - [ ] Listando produtos
 - [ ] Estilizando lista de produtos
