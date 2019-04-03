@@ -8,7 +8,11 @@ const rootStack = createStackNavigator({
    defaultNavigationOptions: {
       headerTintColor: "#FFF",
       headerStyle: {
-         backgroundColor: "#000"
+         backgroundColor: "#0e1111"
+      },
+      headerTitleStyle: {
+         fontWeight: 'bold',
+         fontSize: 22
       }
    }
 })
