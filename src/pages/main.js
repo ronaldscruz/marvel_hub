@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native'
-import axios from 'axios'
+import { View, Text, FlatList, Image, TouchableOpacity } from 'react-native'
 import api from '../services/MarvelApi'
 
 export default class Main extends Component{
    state = {
       docs: [],
    }
-
 
    static navigationOptions = {
       title: 'MARVEL HUB',
@@ -18,18 +16,31 @@ export default class Main extends Component{
    }
 
    loadHeroes = async() => {
-      const response = await api('characters', 'offset=20')
+      const response = await api('characters')
       const {results} = response.data.data
       this.setState({docs: results})
    }
 
+   renderItem = ({item}) => (
+      <View>
+         <TouchableOpacity onPress={() => {}}>
+            <Image 
+               source={{uri: item.thumbnail.path+'.jpg'}}
+               style={{ width: 'auto', height: 300}}
+            />
+            <Text> {item.name} </Text>
+         </TouchableOpacity>
+      </View>
+   )
+
    render(){
       return(
          <View>
-            <Text>Todos os heróis: </Text>
-            {this.state.docs.map(hero => {
-               return <Text key={hero.id}> {hero.name} </Text>
-            })}
+            <FlatList
+               data={this.state.docs}
+               keyExtractor={item => ''+item.id}
+               renderItem={this.renderItem}
+            />
          </View>
       )
    }

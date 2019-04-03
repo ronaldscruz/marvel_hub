@@ -1,11 +1,12 @@
-# react-native
+# React Native: Marvel Hub
+Using Marvel API to retrieve all heroes data
 
 - [x] Componentes
 - [x] Navegação
 - [x] Estilizando Header e StatusBar
-- [x] Buscando produtos da API
-- [ ] Estado
-- [ ] Listando produtos
-- [ ] Estilizando lista de produtos
+- [x] Buscando heróis da API
+- [x] Estado
+- [x] Listando herois
+- [ ] Estilizando lista de heróis
 - [ ] Scroll infinito com FlatList
 - [ ] Detalhe com WebView
