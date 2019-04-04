@@ -9,4 +9,5 @@ Using Marvel API to retrieve all heroes data
 - [x] Listando herois
 - [x] Estilizando lista de heróis
 - [x] Scroll infinito com FlatList
-- [ ] Detalhe com WebView
+- [x] Detalhar herói
+- [ ] Buscar herói

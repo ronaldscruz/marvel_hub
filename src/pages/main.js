@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, FlatList, Image, TouchableOpacity, StyleSheet } from 'react-native'
+import { View, Text, FlatList, Image, TouchableOpacity, StyleSheet} from 'react-native'
 import api from '../services/MarvelApi'
 
 export default class Main extends Component{
@@ -9,16 +9,12 @@ export default class Main extends Component{
       total: 0
    }
 
-   static navigationOptions = {
-      title: 'MARVEL_HUB',
-   }
-
    componentDidMount(){
       this.loadHeroes()
    }
 
    loadHeroes = async(offset=0) => {
-      const response = await api('characters', `limit=10&offset=${offset}`)
+      const response = await api('characters', `limit=10&offset=${offset}&orderBy=-modified`)
       const {results} = response.data.data
       const { total } = response.data.data
       this.setState({docs: [...this.state.docs, ...results], total, offset})
@@ -35,7 +31,11 @@ export default class Main extends Component{
 
    renderItem = ({item}) => (
       <View style={styles.listHeroesItem}>
-         <TouchableOpacity onPress={() => {}}>
+         <TouchableOpacity onPress={() => {
+            this.props.navigation.navigate(`HeroDetail`, {
+               id: item.id+''
+            })
+         }}>
             <Image 
                source={{uri: item.thumbnail.path+'.jpg'}}
                style={{ width: 'auto', height: 290}}
