@@ -37,6 +37,7 @@ project.xcworkspace
 .idea
 .gradle
 local.properties
+android/app/gradle.properties
 
 # node.js
 node_modules/
