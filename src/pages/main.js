@@ -6,12 +6,8 @@ export default class Main extends Component{
    state = {
       docs: [],
       offset: 0,
-<<<<<<< HEAD
       total: 0,
       orderBy: '-modified'
-=======
-      total: 0
->>>>>>> 9e8842fb7b7926d276a38522f59d568ce6d710d3
    }
 
    componentDidMount(){
@@ -19,11 +15,7 @@ export default class Main extends Component{
    }
 
    loadHeroes = async(offset=0) => {
-<<<<<<< HEAD
       const response = await api('characters', `limit=10&offset=${offset}&orderBy=${this.state.orderBy}`)
-=======
-      const response = await api('characters', `limit=10&offset=${offset}&orderBy=-modified`)
->>>>>>> 9e8842fb7b7926d276a38522f59d568ce6d710d3
       const {results} = response.data.data
       const { total } = response.data.data
       this.setState({docs: [...this.state.docs, ...results], total, offset})

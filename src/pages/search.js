@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
 import { Text, View, StyleSheet, Image, ImageBackground, TouchableOpacity } from 'react-native'
 
 import { SearchBar } from 'react-native-elements'
@@ -103,13 +102,5 @@ const styles = StyleSheet.create({
       fontWeight: 'bold',
    },
 })
-=======
-import { SearchBar } from 'react-native-elements'
-import api from '../services/MarvelApi'
 
-export default class Search extends React.Component{
-   state = {
-      searchValue: '',
-   }
-}
->>>>>>> 9e8842fb7b7926d276a38522f59d568ce6d710d3
+
