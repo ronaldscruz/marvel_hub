@@ -1,4 +1,4 @@
-package com.reactnativestation;
+package com.marvelhub;
 
 import android.app.Application;
 
