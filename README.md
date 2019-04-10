@@ -1,6 +1,6 @@
 # React Native: Marvel Hub
 
-![alt text](https://raw.githubusercontet.com/ronaldscruz/marvel_hub/master/ss.png)
+![alt text](https://raw.githubusercontent.com/ronaldscruz/marvel_hub/master/ss.png)
 
 Using Marvel API to retrieve all heroes data
 
